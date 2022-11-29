@@ -12,6 +12,6 @@ glimpse(records_to_check)
 names(records_to_check)
 
 # 3. Detect the actions disclosing data
-records_to_check %>% 
+results <- records_to_check %>% 
       filter(str_detect(Screen.Action, "Show Patients")) %>% 
-      write.csv("results/action_checking_results.csv")
+      write.csv("action_checking_results.csv")
