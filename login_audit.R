@@ -1,3 +1,5 @@
+# Install/load required packages
+if(!require("tidyverse")) install.packages("tidyverse")
 library(tidyverse)
 
 # 1. Read in all csv in the folder
