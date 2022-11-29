@@ -7,7 +7,7 @@ records <-  list.files(pattern="*.csv")
 read_records <-  lapply(records, read.csv)  
 
 # 2. Combine the files into a large dataframe. 
-records_to_check <- do.call(rbind, myfiles)
+records_to_check <- do.call(rbind, read_records)
 glimpse(records_to_check)
 names(records_to_check)
 
