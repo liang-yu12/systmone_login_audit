@@ -1,3 +1,6 @@
+sink("results/log.txt")
+
+Sys.time()
 # Install/load required packages
 if(!require("tidyverse")) install.packages("tidyverse")
 library(tidyverse)
@@ -16,6 +19,4 @@ records_to_check %>%
       filter(str_detect(Screen.Action, "Show Patients")) %>% 
       write.csv("results/action_checking_results.csv")
 
-
-# save process log:
-savehistory("results/log.txt")
+Sys.time()
